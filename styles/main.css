@@ -1,0 +1,113 @@
+/** COLOR VARIABLES **/
+/** COLOR -> https://chir.ag/projects/name-that-color **/
+:root {
+    --color-ebony-clay: #1F2937;
+    --color-athens-gray: #E5E7EB;
+    --color-buttercup: #edb519;
+    --color-lightning-yellow: #FCBA18;
+    --color-dodger-blue: #3882F6;
+}
+
+/** GLOBAL SELECTORS **/
+body {
+    font-family: Roboto, sans-serif;
+}
+
+
+a, button {
+    cursor: pointer;
+}
+
+.o-wrapper {
+    max-width: 1366px;
+    padding: 0 5em;
+    align-self: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/** HERO && HEADER **/
+.hh-container {
+    display: flex;
+    background: var(--color-lightning-yellow);
+    color: #fff;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0 0 0;
+}
+
+.header-logo-text, .hero-main-text {
+    color: #F9FAF8;
+}
+
+.header-logo-text {
+    font-size: 24px;
+}
+
+.header-nav-list {
+    display: flex;
+    gap: 0 40px;
+    list-style-type: none;
+}
+
+.header-link-text {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em 0;
+}
+
+.hero-text-container {
+    flex: 1 1 40%;
+}
+
+.hero-text-container > * {
+    padding: 5px 0;
+}
+
+.hero-image-wrapper {
+    flex: 1 1 60%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.hero-main-text {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-secondary-text, .header-link-text {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+/** BUTTON **/
+.dodger-blue-btn{
+    background: var(--color-dodger-blue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 25px;
+    font-weight: 600;
+}
+/** FOOTER **/
+.footer {
+    background-color: var(--color-ebony-clay);
+    width: 100vw;
+    text-align: center;
+}
+
+.footer-text {
+    padding: 2.2em 0;
+    font-size: 11px;
+    color: #fff;
+}
