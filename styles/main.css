@@ -6,6 +6,12 @@
     --color-buttercup: #edb519;
     --color-lightning-yellow: #FCBA18;
     --color-dodger-blue: #3882F6;
+    --color-geebung: #CB921C;
+    --color-link-water: #dfecf4;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /** GLOBAL SELECTORS **/
@@ -18,33 +24,55 @@ a, button {
     cursor: pointer;
 }
 
+/** GLOBAL CUSTOM SELECTORS **/
 .o-wrapper {
     max-width: 1366px;
-    padding: 0 5em;
+    padding: 0 3em;
     align-self: center;
     margin: 0 auto;
     width: 100%;
 }
 
+.block-header {
+    padding: 12px 0;
+}
+
+.block-section {
+    margin: 3em 0;
+}
+
 /** HERO && HEADER **/
 .hh-container {
     display: flex;
-    background: var(--color-lightning-yellow);
-    color: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.15)),
+        url('../assets/images/essential-oil-gbdb6cac15_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 0 0 0;
+    background: var(--color-lightning-yellow);
+    width: 100%;
 }
 
-.header-logo-text, .hero-main-text {
-    color: #F9FAF8;
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 3em;
 }
 
 .header-logo-text {
     font-size: 24px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .header-nav-list {
@@ -54,8 +82,12 @@ a, button {
 }
 
 .header-link-text {
+    font-size: 18px;
     text-decoration: none;
-    color: #fff;
+}
+
+.header-link-text:hover {
+    text-decoration: underline;
 }
 
 .hero-wrapper {
@@ -66,11 +98,11 @@ a, button {
 }
 
 .hero-text-container {
-    flex: 1 1 40%;
+    max-width: 500px;
 }
 
-.hero-text-container > * {
-    padding: 5px 0;
+.hero-text-container>* {
+    padding: 10px 0;
 }
 
 .hero-image-wrapper {
@@ -81,33 +113,151 @@ a, button {
 }
 
 .hero-main-text {
+    color: #0a0a0a;
     font-size: 48px;
     font-weight: 700;
 }
 
 .hero-secondary-text, .header-link-text {
     font-size: 18px;
-    color: #E5E7EB;
+    color: hsl(210, 3%, 13%);
+}
+
+/** INFORMATIONAL TEXT **/
+.informational-block {
+    padding: 3em 5em;
+    background-color: #f5f2f2;
+}
+
+.informational-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.informational-header {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: center;
+    border-bottom: #1F2937;
+}
+
+.informational-list {
+    display: flex;
+    gap: 2em 4em;
+}
+
+.informational-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    justify-content: center;
+}
+
+.informational-img-wrapper {
+    border: 3px solid var(--color-lightning-yellow);
+    border-radius: 8px;
+    height: 160px;
+}
+
+.informational-text {
+    margin: .8em 0;
+}
+
+/** TESTIMONY **/
+.testimonial-block {
+    background-image: url('../assets/images/marigold-gbae09c331_1920.jpg');
+    padding: 5em;
+}
+
+.testimony-wrapper {
+    background: rgba(228, 227, 227, 0.405);
+    border-radius: 12px;
+    max-width: 1000px;
+    height: max-content;
+}
+
+.testimony-text {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.testimony {
+    padding: 4em 3em 1.8em;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.testimony-author {
+    padding: 2.4em 0;
+    font-size: 20px;
+    text-align: end;
 }
 
 /** BUTTON **/
-.dodger-blue-btn{
-    background: var(--color-dodger-blue);
+.lightning-yellow-btn {
+    background: var(--color-lightning-yellow);
     color: #fff;
     border: none;
+    box-shadow: 0px 4px 15px 0 rgb(0, 0, 0, .16);
     border-radius: 5px;
-    padding: 5px 25px;
+    padding: 10px 25px;
     font-weight: 600;
 }
+
+.black-border-btn {
+    background: var(--color-lightning-yellow);
+    color: #1a1919;
+    border: 1px solid #1a1919;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+
+.btn-container {
+    display: flex;
+    gap: 0 20px;
+}
+
+/** SIGN UP BOX **/
+.sign-up-section {
+    padding: 2em 0;
+    margin: 0 auto;
+}
+
+.sign-up-block {
+    background: var(--color-lightning-yellow);
+    border-radius: 4px;
+}
+
+.sign-up-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 4em 6em;
+}
+
+.sign-up-main {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sign-up-secondary {
+    font-weight: 300;
+}
+
+.sign-up-btn-wrapper {
+    text-align: center;
+}
+
 /** FOOTER **/
 .footer {
-    background-color: var(--color-ebony-clay);
-    width: 100vw;
+    background-color: #E5E7EB;
     text-align: center;
 }
 
 .footer-text {
     padding: 2.2em 0;
-    font-size: 11px;
-    color: #fff;
+    font-size: 12px;
+    color: #1f2937;
 }
