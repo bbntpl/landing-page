@@ -46,6 +46,7 @@ a, button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: max-content;
     height: 100vh;
     background:
         linear-gradient(rgba(0, 0, 0, 0.05),
@@ -53,6 +54,7 @@ a, button {
         url('../assets/images/essential-oil-gbdb6cac15_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 .main-header {
@@ -144,13 +146,14 @@ a, button {
 
 .informational-list {
     display: flex;
-    gap: 2em 4em;
+    flex-wrap: wrap;
+    gap: 1.4rem 3rem;
 }
 
 .informational-item {
     display: flex;
     flex-direction: column;
-    flex: 1 1 25%;
+    flex: 1 1 20%;
     justify-content: center;
 }
 
@@ -167,7 +170,7 @@ a, button {
 /** TESTIMONY **/
 .testimonial-block {
     background-image: url('../assets/images/marigold-gbae09c331_1920.jpg');
-    padding: 5em;
+    padding: 5rem;
 }
 
 .testimony-wrapper {
@@ -260,4 +263,45 @@ a, button {
     padding: 2.2em 0;
     font-size: 12px;
     color: #1f2937;
+}
+
+@media screen and (max-width: 768px){
+    .header-wrapper{
+        flex-direction: column;
+    }
+    .header-wrapper > *{
+        padding: 1.5em 2em 1.5em 0;
+    }
+    .header-nav-list{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .o-wrapper{
+        padding: 0 2em;
+    }
+    .informational-block{
+        padding: 1em 1.8em;
+    }
+    .testimonial-block {
+        padding: 2rem;
+    }
+    .testimony {
+        padding: 2rem 1.6rem 1.2rem;
+        font-style: italic;
+        color: #1F2937;
+    }
+    .sign-up-block, .sign-up-section{
+        width: 100%;
+        padding: 0;
+    }
+    .sign-up-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5em 3em;
+    }
+}
+@media screen and (max-height: 480px){
+    .hh-container{
+        height: max-content;
+    }
 }
